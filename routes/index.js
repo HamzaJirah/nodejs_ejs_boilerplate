@@ -1,11 +1,11 @@
 'use strict';
 
-module.exports = function(app) {
-    app.get('/', function(req, res) {
+module.exports = (app) => {
+    app.get('/', (req, res) => {
         res.render('pages/index');
     });
 
-    app.get('/about', function(req, res) {
+    app.get('/about', (req, res) => {
         res.render('pages/about');
     });
 };
