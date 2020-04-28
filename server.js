@@ -3,11 +3,13 @@
 // ================================================================
 // get all the tools we need
 // ================================================================
-var express = require('express');
-var routes = require('./routes/index.js');
-var port = process.env.PORT || 3000;
+const express = require('express');
+const chalk = require("chalk");
+const debug = require("debug")("app");
+const routes = require('./routes/index.js');
+const port = process.env.PORT || 3000;
 
-var app = express();
+const app = express();
 
 // ================================================================
 // setup our express application
@@ -24,6 +26,6 @@ routes(app);
 // ================================================================
 // start our server
 // ================================================================
-app.listen(port, function() {
-    console.log('Server listening on port ' + port + '...');
+app.listen(port, () => {
+    debug(`Listening on port ${chalk.blue(`${port}`)}`);
 });

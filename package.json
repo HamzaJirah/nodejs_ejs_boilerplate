@@ -5,7 +5,7 @@
   "author": "Jennifer Bland",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "DEBUG=app nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,12 +16,15 @@
     "boilerplate"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/ratracegrad/nodejs_ejs_boilerplate"
+    "type": "git",
+    "url": "https://github.com/ratracegrad/nodejs_ejs_boilerplate"
   },
   "license": "MIT",
   "dependencies": {
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
     "ejs": "^2.4.1",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "nodemon": "^2.0.3"
   }
 }
